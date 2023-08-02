@@ -1,0 +1,155 @@
+.calc
+    &__wrapper
+        display: flex
+        gap: var(--gap)
+    &__content
+        width: var(--width-block)
+    &__title
+        margin-bottom: 32px
+    &__fieldset
+        margin: 0
+        padding: 0
+        border: 0
+        &_size
+            margin-bottom: 32px
+            display: flex
+        &_tariff
+            margin-bottom: 65px
+    &__text
+        font-size: 12px
+        color: #898989
+        margin-bottom: 2px
+        &_legend
+            margin-bottom: 16px
+    &__wrapper-input-size
+        margin-right: 10px
+        width: var(--width-block)
+    &__wrapper-input-size:last-child
+        margin-right: 0
+    &__wrapper-input-tariff
+        margin-right: 16px
+        display: inline-flex
+        gap: 8px
+    &__wrapper-input-tariff:last-child
+        margin-right: 0
+    &__input-number
+        width: 100%
+        height: 54px
+        background-color: #FFFFFF
+        border: 1px solid #E4E4E4
+        border-radius: 12px
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        padding: 0 25px
+        &:hover
+            border-color: #FFC700
+        &::-webkit-inner-spin-button
+            display: none
+    &__input-radio   
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        display: block
+        position: relative
+        width: 24px
+        height: 24px
+    &__input-radio::before
+        content: ''
+        position: absolute
+        inset: 0
+        background-color: #FFFFFF
+        border: 1px solid #E4E4E4
+        border-radius: 12px
+    &__input-radio::after
+        content: ''
+        position: absolute
+        inset: 0
+        transform: scale(0.33)
+        background-color: #232020
+        border-radius: 50%
+        opacity: 0
+    &__input-radio:checked::after
+        opacity: 1
+    &__label-radio
+        text-transform: uppercase
+    &__total
+        width: var(--width-block)
+        display: flex
+        align-items: flex-end
+        padding: var(--padding)
+        border-radius: 12px
+        background: #333333 url('../img/calc-img.jpg') center/cover no-repeat
+    &__result-wrapper
+        display: none
+        background-color: #FFFFFF
+        flex-basis: 303px
+        padding: 24px
+        border-radius: 8px
+    &__result
+        margin-bottom: 16px
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-top: 0
+        gap: 20px
+    &__result:last-child
+        margin-bottom: 0   
+
+
+    @media (max-width: 1240px)
+        .calc
+            &__title
+                margin-bottom: 24px
+            &__fieldset
+                &_size
+                    margin-bottom: 24px
+                &_tariff
+                    margin-bottom: 34px
+
+    @media (max-width: 920px)
+        .calc
+            &__wrapper
+                flex-direction: column
+                --width-block: 100%
+            &__fieldset
+                &_tariff
+                    margin-bottom: 36px
+            &__input-number
+                height: 36px
+                padding: 0 16px
+            &__label-radio
+                font-size: 14px
+            &__text_legend
+                margin-bottom: 8px
+            &__total
+                min-height: 220px
+                align-items: flex-start
+                background-position: 50% 75%
+    @media (max-width: 560px)
+        .calc
+            &__title
+                margin-bottom: 16px
+            &__fieldset
+                &_size
+                    flex-direction: column
+                    margin-bottom: 16px
+                &_tariff
+                    margin-bottom: 24px
+            &__wrapper-input-size
+                margin-right: 0
+                margin-bottom: 10px
+            &__wrapper-input-size:last-child
+                margin-bottom: 0
+            &__wrapper-input-tariff
+                display: flex
+                margin-right: 0
+                margin-bottom: 8px
+            &__wrapper-input-tariff:last-child
+                margin-bottom: 0
+            &__result-wrapper
+                padding: 16px
+            &__total
+                min-height: 128px
+            &__result
+                margin-bottom: 8px

@@ -1,0 +1,60 @@
+.footer
+    &__wrapper
+        border-top: 2px solid #F8F8F8
+        padding-top: 50px
+        display: grid
+        grid-template-columns: max-content 1fr max-content
+        gap: 40px 126px 
+        grid-template-areas: 'logo social contact' 'copyright . developer'
+    &__logo
+        width: 162px    
+        height: 39px
+        grid-area: logo
+    &__list
+        display: flex
+        flex-direction: column
+    &__social
+        flex-direction: row
+        grid-area: social
+        gap: 24px
+        justify-self: end
+    &__contact
+        grid-area: contact
+        gap: 16px
+        padding-top: 8px
+    &__developer
+        grid-area: developer
+        gap: 8px
+    &__copyright
+        grid-area: copyright
+        margin: 0
+    &__link_contact
+        display: flex
+        align-items: center
+        gap: 8px
+
+@media (max-width: 1240px)
+    .footer
+        &__wrapper
+            padding-top: 30px
+            column-gap: 86px
+@media (max-width: 920px)
+    .footer
+        font-size: 14px
+        &__wrapper
+            padding-top: 24px
+            gap: 28px 10%
+        &__logo
+            width: 124px
+        &__social
+            gap: 16px
+        &__contact
+            gap: 8px
+@media (max-width: 560px)
+    .footer
+        &__wrapper
+            display: flex
+            flex-direction: column
+            gap: 24px 
+        &__copyright
+            order: 1

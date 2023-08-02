@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="js/just-validate.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/normalizes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Теплый пол</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="visually-hidden">Теплый пол в каждый дом</h1>
+        <div class="container">
+            <div class="header__wrapper">
+                <img class="header__logo image" src="icon/logo.svg" alt="LOGO">
+                <button class="header__btn button button_o js-order">Заказать</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section__offset">
+            <div class="container hero__wrapper">
+                <div class="hero__content gray-block">
+                    <h2 class="hero__title title">Приносим тепло в каждый дом</h2>
+                    <p class="hero__description">Устанавливаем теплые полы в квартирах, офисах и загородных домах.</p>
+                    <a href="#calc" class="button hero__link">Расчитать&nbsp; стоимость</a>
+                </div>
+                <div class="hero__slider-block">
+                    <div class="hero__slider swiper">
+                        <div class=" hero__slider-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div 
+                                    class=" hero__image" 
+                                    style="background-image: url('../img/hero_image_1.jpg');">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class=" hero__image" 
+                                    style="background-image: url('../img/hero_image_2.jpg');">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class=" hero__image" 
+                                    style="background-image: url('../img/hero_image_3.jpg');">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class=" hero__image" 
+                                    style="background-image: url('../img/hero_image_4.jpg');">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class=" hero__image" 
+                                    style="background-image: url('../img/hero_image_5.jpg');">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                            <div class="hero__arrow">
+                                <button class="hero__slider-btn hero__slider-btn_prev"></button>
+                                <button class="hero__slider-btn hero__slider-btn_next"></button>
+                            </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="advantages section__offset">
+            <div class="container">
+                 <div class="advantages__wrapper">
+                    <h2 class="advantages__title title">Наши преимущества</h2>
+
+                    <ul class="advantages__list list-reset">
+                        <li class="advantages__item">Надежные материалы</li>
+                        <li class="advantages__item">опытные монтажники</li>
+                        <li class="advantages__item">Регулируемая температура пола</li>
+                        <li class="advantages__item">Защита от замыканий</li>
+                        <li class="advantages__item">Гарантия до 10 лет</li>
+                    </ul>
+                 </div>
+            </div>
+        </section>
+
+
+        <section class="calc section__offset" id="calc"> 
+            <div class="container calc__wrapper">
+                <div class="calc__content gray-block">
+                    <h2 class="calc__title title">Рассчитайте стоимость</h2>
+
+                    <form class="calc__form js-calc-form">
+                        <fieldset   class="calc__fieldset calc__fieldset_size">
+                            <label class="calc__wrapper-input calc__wrapper-input-size" for="">
+                                <span class="calc__text">Ширина помещения, м</span>
+                                <input class="calc__input-number" type="number" name="width" id="" required>
+                            </label>
+                            <label class="calc__wrapper-input calc__wrapper-input-size" for="">
+                                <span class="calc__text">Длинна помещения, м</span>
+                                <input class="calc__input-number" type="number" name="length" id="" required>
+                            </label>
+                        </fieldset>
+                        <fieldset   class="calc__fieldset calc__fieldset_tariff">
+                            <legend class="calc__text calc__text_legend">Тариф</legend>
+                            <label class="calc__wrapper-input calc__wrapper-input-tariff" for="">
+                                <input class="calc__input-radio" type="radio" name="tariff" value="economy" id="">
+                                <span class="calc__label-radio">Эконом</span>
+                            </label>
+                            <label class="calc__wrapper-input calc__wrapper-input-tariff" for="">
+                                <input class="calc__input-radio" type="radio" name="tariff" value="comfort" id="" checked>
+                                <span class="calc__label-radio">Комфорт</span>
+                            </label>
+                            <label class="calc__wrapper-input calc__wrapper-input-tariff" for="">
+                                <input class="calc__input-radio" type="radio" name="tariff" value="premium" id="">
+                                <span class="calc__label-radio">Премиум</span>
+                            </label>
+                        </fieldset>
+                        <button class="button calc__submit js-submit" type="submit" disabled>Рассчитать</button>
+                    </form>
+
+                </div>
+                <div class="calc__total">
+                    <div class="calc__result-wrapper js-result-wrapper">
+                        <p class="calc__result">
+                            <span class="calc__text">Площадь</span>
+                            <span class="calc__result-text js-square">35 кв м</span>
+                        </p>
+                        <p class="calc__result">
+                            <span class="calc__text">Примерная стоимость</span>
+                            <span class="calc__result-text js-total-price">42590 руб</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer section__offset">
+        <div class="container">
+            <div class="footer__wrapper">
+                <img class="footer__logo image" src="icon/logo.svg" alt="LOGO">
+                <ul class="footer__list footer__social list-reset">
+                    <li class="footer__item">
+                        <a class="link footer__link" href="#" aria-label="наш канал ютуб"> 
+                            <img src="icon/youtube.svg" alt="наш канал ютуб"> </a>
+                        </li>
+                    <li class="footer__item">
+                        <a class="link footer__link" href="#" aria-label="на группа в телеграм"> 
+                            <img src="icon/telegram.svg" alt="наш телеграм"> </a>
+                        </li>
+                </ul>
+                <ul class="footer__list footer__contact list-reset">
+                    <li class="footer__item">
+                        <a class="link footer__link footer__link_contact" href="tel:+78588497380"> 
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.35597 0.638845C3.28361 -0.288798 4.81437 -0.193496 5.61979 0.842043L7.86192 3.72478C8.27338 4.2538 8.41877 4.94261 8.25623 5.59278L7.57215 8.32911C7.49993 8.618 7.58457 8.92359 7.79513 9.13415L10.8659 12.2049C11.0764 12.4154 11.382 12.5001 11.6709 12.4279L14.4072 11.7438C15.0574 11.5812 15.7462 11.7266 16.2752 12.1381L19.158 14.3802C20.1935 15.1856 20.2888 16.7164 19.3612 17.644L18.0688 18.9364C17.1441 19.8611 15.7611 20.2671 14.4722 19.814C11.2719 18.6888 8.26798 16.8468 5.71061 14.2894C3.15324 11.732 1.31119 8.72807 0.186048 5.52781C-0.267103 4.2389 0.138913 2.8559 1.06356 1.93125L2.35597 0.638845Z" fill="black"/>
+                                </svg>
+                            <span>+7&nbsp;858&nbsp;849&nbsp;73&nbsp;80</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="link footer__link footer__link_contact" href="mailto:Teplyipol@gmail.com">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3C1.57234 3 0.377595 3.99726 0.0743781 5.33316L12 12.621L23.9256 5.33316C23.6224 3.99725 22.4277 3 21 3H3Z" fill="black"/>
+                                <path d="M0 17.7009V7.04563L8.70479 12.3652L0 17.7009Z" fill="black"/>
+                                <path d="M10.1421 13.2436L0.287807 19.2838C0.768906 20.2984 1.80252 21 3 21H12.3841C12.1353 20.2962 12 19.5389 12 18.75C12 16.6754 12.9359 14.8194 14.4086 13.5811L13.8579 13.2436L12 14.379L10.1421 13.2436Z" fill="black"/>
+                                <path d="M24 14.507V7.04563L15.2952 12.3652L15.8022 12.676C16.6929 12.2429 17.6931 12 18.75 12C20.8704 12 22.7625 12.9778 24 14.507Z" fill="black"/>
+                                <path d="M23.7508 18.3663C23.7508 20.1174 22.8851 21.4029 21.3701 21.4029C20.6159 21.4029 19.8682 21.0618 19.6911 20.4322H19.6255C19.4485 21.0553 18.8123 21.3963 18.104 21.3963C16.9497 21.3963 16.2152 20.5831 16.2152 19.2452V18.4516C16.2152 17.1858 16.9366 16.3529 18.104 16.3529C18.9828 16.3529 19.4091 16.8513 19.5337 17.2973H19.5796V16.4447H20.9372V19.7305C20.9372 20.1371 21.2061 20.3601 21.5537 20.3601C22.0259 20.3601 22.5112 19.737 22.5112 18.2745V18.0974C22.5112 16.1824 21.0881 14.6084 18.7861 14.6084H18.727C16.3529 14.6084 14.7658 16.2086 14.7658 18.6943V18.9304C14.7658 21.7308 16.6218 22.9113 18.6221 22.9113H18.6877C19.4485 22.9113 20.0912 22.8064 20.4585 22.6424V23.7377C20.1305 23.8885 19.4944 24 18.6024 24H18.5368C15.6577 24 13.5 22.2292 13.5 18.9697V18.6483C13.5 15.5397 15.6315 13.5 18.727 13.5H18.7795C21.9603 13.5 23.7508 15.6446 23.7508 18.0515V18.3663ZM17.6908 18.6811V19.0222C17.6908 19.901 18.0319 20.2224 18.5631 20.2224C19.0287 20.2224 19.4091 19.9666 19.4091 19.1074V18.5565C19.4091 17.7826 18.9959 17.4941 18.55 17.4941C18.0319 17.4941 17.6908 17.8613 17.6908 18.6811Z" fill="black"/>
+                                </svg>
+                            <span>Teplyipol@gmail.com</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">&copy; Теплый пол, 2023</p>
+
+                <ul class="footer__list footer__developer list-reset">
+                    <li class="footer__item">
+                        Designer:
+                        <a class="link footer__link" href="" target="_blank">Anastasia Ilina</a>
+                    </li>
+                    <li class="footer__item">
+                        Developer: 
+                        <a class="link footer__link" href="" target="_blank">Konstantsin Shcherba</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal__main">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <h2 class="modal__title title">
+                        Оставьте заявку и мы перезвоним
+                    </h2>
+                    <p class="modal__subtitle">Наши мастера свяжутся с вами в течение 3 часов</p>
+                    <form class="modal__form">
+                        <fieldset class="modal__fieldset">
+                            <label class="modal__wrapper-input">
+                                <span class="modal__text">Имя</span>
+                                <input type="text" class="modal__input" name="name" id="name">
+                            </label>
+                            <label class="modal__wrapper-input">
+                                <span class="modal__text">Телефон</span>
+                                <input type="tel" class="modal__input" name="phone" id="phone">
+                            </label>
+                        </fieldset>
+                        <button class="button modal__submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <button class="button button_o modal__close">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 11L11 21" stroke="#232020" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21L11 11" stroke="#232020" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </button>
+        </div>
+    </div>
+
+    
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/validator.js"></script>
+
+    
+</body>
+</html>
